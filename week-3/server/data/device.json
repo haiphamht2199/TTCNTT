@@ -1,0 +1,32 @@
+{
+  "Devices":[
+    {
+    "device":"TV",
+    "macAdress":"00:1B:44:11:3A:B7",
+    "ip":"127.0.0.2",
+    "createDate":"2021-05-31",
+    "power":"50"
+  },
+  {
+    "device":"Sasher",
+    "macAdress":"00:1B:44:11:3A:B8",
+    "ip":"127.0.0.3",
+    "createDate":"2021-05-31",
+    "power":"60"
+  },
+  {
+    "device":"Refigerator",
+    "macAdress":"00:1B:44:11:3A:B9",
+    "ip":"127.0.0.4",
+    "createDate":"2021-05-31",
+    "power":"80"
+  },
+  {
+    "device":"Selling Fan",
+    "macAdress":"00:1B:44:11:3A:B2",
+    "ip":"127.0.0.5",
+    "createDate":"2021-05-31",
+    "power":"100"
+  }
+]
+}

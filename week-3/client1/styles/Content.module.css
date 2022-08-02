@@ -1,0 +1,357 @@
+
+/*Dashboard*/
+.main{
+ position: absolute;
+ width: 1340px;
+ left: 200px;
+ right: 0px;
+ min-height: 100vh;
+ background: #f5f5f5;
+ transition: 0.5s;
+ display: flex;
+ overflow: hidden;
+ overflow-x:hidden;
+}
+.main .topbar{
+ width: 100%;
+ background: #fff;
+ height: 60px;
+ display: flex;
+ justify-content:space-between;
+ cursor: pointer;
+position: absolute;
+
+}
+.toggle{
+ position: relative;
+ width: 60px;
+ height: 60px;
+ cursor: pointer;
+}
+
+.toggle::before{
+ content: "\f0c9";
+ font-family: fontAwesome;
+ position: absolute;
+ width: 100%;
+height: 100%;
+line-height: 60px;
+font-size: 24px; 
+color: black;
+align-items: center;
+text-align: center;
+}
+.fa-user-circle-o:before {
+ content: "\f2be";
+ font-size: 32px;
+}
+.user{
+ float: right;
+ margin-right: 40px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.user .signout{
+ margin-left: 10px;
+ cursor: pointer;
+}
+.user button{
+ outline: none;
+ border: none;
+ background: blue;
+ color: white;
+ border-radius: 2px;
+ width: 60px;
+ height: 30px;
+}
+/*table*/
+.cardBoad{
+ position: relative;
+ margin-top: -10px;
+width: 100%;
+padding: 50px 70px 70px 70px;
+padding-right: 70px;
+}
+.card{
+display: grid;
+margin-right: 50px;
+}
+.card table{
+width: 100%;
+border-collapse: collapse;
+margin-top: 10px;
+background: white;
+color: gray;
+}
+.card table thead td{
+ font-weight: 600;
+ padding-left: 20px;
+ margin-top: 10px;
+} 
+.card table tr{
+ border-bottom: 1px solid gray;
+ height: 50px;
+}
+.card table tr td{
+ padding-left: 30px;
+ align-items: center;
+ justify-content: center;
+}
+.total{
+ color: black !important;
+ background:#FFFAFA !important ;
+ font-size: 18px !important;
+ font-weight: 600;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.total .spanTotal{
+ margin-right: 180px;
+}
+.total .spanTotal1{
+ margin-right: 170px !important;
+ font-weight: 600;
+}
+.action{
+ align-items: center;
+ justify-content: center;
+ margin-left: 40px;
+ margin-top: 12px;
+ font-size: 19px;
+ cursor: pointer;
+}
+.action .delete{
+ margin-right: 0px;
+}
+/*chart*/
+#myChart{
+ width: 500px !important;
+ height: 500px !important;
+}
+.Devices{
+ display: flex;
+ margin-top: 30px;
+}
+.chart{
+width: 40%;
+background: white;
+}
+.addDevices{
+ width: 60%;
+ background: white;
+ margin-left: 30px;
+ margin-right: 50px;
+}
+.add{
+ width: 500px;
+ border: none;
+ border-radius: 5px;
+ background: white;
+ padding: 15px 80px;
+}
+.formcontrol{
+ margin-top: 50px;
+ position: relative;
+ width: 100%;
+}
+.formcontrol input{
+ width: 130%;
+ height: 50px;
+ outline: none;
+ border: none;
+ background: white;
+ border-radius: 4px;
+border-bottom: 5px;
+font-size: 14px;
+padding-left: 10px;
+border: 2px solid black;
+}
+.bntbutton{
+ display: flex;
+ margin-top: 40px;
+ margin-left: 120px;
+ margin-bottom: 20px;
+}
+.submit{
+ height: 40px;
+ width: 150px;
+ background: #FFA500;
+ border-radius: 10px;
+ margin-right: 55px;
+ border: none;
+ outline: none;
+ font-size: 14px;
+ font-weight: 600;
+ color: white;
+ cursor: pointer;
+ 
+}
+
+
+/*edit*/
+
+
+.model_hide{
+background: rgb(0,0,0,0.6);
+position: fixed;
+height: 100vh;
+top: 0;
+width: 100vw;
+z-index: 1000;
+}
+.model_inner{
+width: 630px;
+height: 680px;
+position: relative;
+top: 5%;
+margin: auto;
+background: white;
+margin-bottom: 70px;
+animation: modelShow 0.5s linear;
+}
+.model_herder{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px;
+background-color: blue;
+color: white;
+
+}
+.model_herder p{
+ font-size: 18px;
+ font-weight: 600;
+}
+.model_herder .fa-times{
+font-size: 18px;
+margin-right: 2px;
+cursor: pointer;
+}
+.model_body{
+padding: 15px;
+margin-bottom: 10px;
+}
+.model_footer{
+padding: 15px;
+text-align: center;
+margin-bottom: 70px;
+}
+.model_footer button{
+ margin-top: -10px;
+ font-size: 18px;
+ font-weight: 600;
+}
+.active{
+display: none;
+}
+.editDevices{
+width: 80%;
+background: white;
+margin-left: 30px;
+margin-right: 50px;
+}
+.edit{
+width: 500px;
+border: none;
+border-radius: 5px;
+/* background: white; */
+padding: 15px 80px;
+}
+.form_control1{
+margin-top: 20px;
+position: relative;
+width: 100%;
+left: 50px;
+}
+.form_control1 label{
+font-size: 18px;
+font-weight: 550;
+
+}
+.form_control1 input{
+width: 300px;
+height: 50px;
+outline: none;
+border: none;
+background: white;
+border-radius: 4px;
+border: 2px solid gray;
+font-size: 16px;
+font-weight: 600;
+padding-left: 10px;
+}
+.form_control1.error small{
+color: red;
+margin-left: 15px;
+}
+.model_footer button{
+ justify-content: center;
+ align-items: center;
+ padding: 10px 20px;
+ color: white;
+ background: blue;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+}
+.iconTimes{
+    cursor: pointer;
+}
+/*reponsive*/
+@keyframes modelShow{
+ from{
+     top: -200px;
+     opacity: 0;
+ }
+ to{
+     top:10%;
+     opacity: 1;
+
+ }
+}
+.loi{
+    color: red;
+  }
+  @media only screen and (max-width: 414px) {
+    .main{
+      left: 0px;
+    }
+   .card{
+       display: none;
+   }
+   .Devices{
+    display: table-row;
+    width: 100%;
+    margin-left: 0px;
+    
+    /* grid-template-columns: 2fr 1fr !important; */
+   }
+   .addDevices{
+       margin-left: -50px;
+       width: 100% !important;
+   }
+   .chart{
+    width: 400px !important;
+    margin-left: -65px;
+    margin-bottom: 10px;
+   }
+   .add{
+    width: 414px;
+    margin-left: -28px;
+   }
+   .bntbutton{
+    margin-left: 65px;
+   width: 100%;
+   }
+   .bntbutton button{
+   width: 120px !important;
+   }
+   .main{
+       width: 414px;
+   }
+   .formcontrol input{
+       margin-left: -27px;
+   }
+  }

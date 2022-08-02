@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="./css/home.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+ <title>Document</title>
+</head>
+<body>
+ <div class="container">
+  <div class="navigation">
+   <ul>
+    <li>
+     <a >
+       <span class="icon"><i class="fa fa-magnet" aria-hidden="true"></i></span>
+       <span class="title">Device Maganer</span>
+     </a>
+    </li>
+    <li>
+     <a href="/dashboard.html">
+       <span class="icon"><i class="fa fa-dashcube" aria-hidden="true"></i></span>
+       <span class="title">DashBoard</span>
+     </a>
+    </li>
+    <li>
+     <a href="/log.html" >
+       <span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+       <span class="title">Logs</span>
+     </a>
+    </li>
+    <li>
+     <a href="#">
+       <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+       <span class="title">Setting</span>
+     </a>
+    </li>
+   </ul>
+  </div>
+  <div class="main">
+   <div class="topbar">
+    <div class="toggle" onclick="toggleMenu();"></div>
+    <div class="user">
+      <a href="/user.html" onclick="user.html"> <span class="user"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span></a>
+     <span>Wecome Jon</span>
+    </div>
+   </div>
+   <div class="cardBoad">
+    <div class="card">
+      <div class="cartHeader">
+        <div class="title">
+          <h1>Actions Logs</h1>
+        </div>
+        <div class="search">
+          <input type="text" class="inputSearch" placeholder="name...">
+          <button id="search">Search</button>
+        </div>
+      </div>
+     <table>
+      <thead>
+       <tr>
+        <td>Divice ID #</td>
+        <td>Name</td>
+        <td>Action</td>
+        <td>Date</td>
+       </tr>
+      </thead>
+      <tbody class="log" id="logs">
+
+      </tbody>
+     </table>
+    </div>
+   
+    <div class="no-result">Không có kết quả tìm kiếm</div>
+    <div class="content__paging">
+        <div class="page">
+            <ul>
+                <li class="btn-prev btn-active fa fa-chevron-left"></li>
+                <div class="number-page" id="number-page">
+        
+                </div>
+                <li class="btn-next fas fa fa-chevron-right"></li>
+            </ul>
+        </div>
+        <div class="page-config">
+            <label for="">Item per page: </label>
+            <select name="" id="mySelect">
+                <option value="3">3</option>
+                <option value="6" selected>6</option>
+                <option value="9">9</option>
+                <option value="12">12</option>
+            </select>
+        </div>
+        <div class="total-page"></div>
+        <div class="total-item"></div>
+    </div>
+  </div>
+ </div>
+ <script src="./js/log.js">
+
+ </script>
+ <script >
+   function toggleMenu() {
+        let toggle = document.querySelector(".toggle");
+        let navigation = document.querySelector(".navigation");
+        let main = document.querySelector(".main");
+        toggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+        main.classList.toggle("active");
+
+}
+ </script>
+</body>
+</html>

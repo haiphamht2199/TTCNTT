@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="./css/home.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <title>Document</title>
+</head>
+<body>
+ <div class="container">
+  <div class="navigation">
+   <ul>
+    <li>
+     <a href="#">
+       <span class="icon"><i class="fa fa-magnet" aria-hidden="true"></i></span>
+       <span class="title">Device Maganer</span>
+     </a>
+    </li>
+    <li>
+     <a href="/dashboard.html">
+       <span class="icon"><i class="fa fa-dashcube" aria-hidden="true"></i></span>
+       <span class="title">DashBoard</span>
+     </a>
+    </li>
+    <li>
+     <a href="/log.html">
+       <span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+       <span class="title">Logs</span>
+     </a>
+    </li>
+    <li>
+     <a href="#">
+       <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+       <span class="title">Setting</span>
+     </a>
+    </li>
+   </ul>
+  </div>
+  <div class="navigation2">
+    <div class="user">
+      <a href="/user.html" onclick="user.html"> <span class="user"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span></a>
+       <div>
+         <p>Wecome john</p>
+       </div>
+      </div>
+    <ul>
+      <li>
+       <a href="#">
+         <span class="icon"><i class="fa fa-magnet" aria-hidden="true"></i></span>
+         <span class="title">Device Maganer</span>
+       </a>
+      </li>
+      <li>
+       <a href="/dashboard.html" onclick="home.html">
+         <span class="icon"><i class="fa fa-dashcube" aria-hidden="true"></i></span>
+         <span class="title">DashBoard</span>
+       </a>
+      </li>
+      <li>
+       <a href="/log.html" onclick="log.html">
+         <span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+         <span class="title">Logs</span>
+       </a>
+      </li>
+      <li>
+       <a href="#">
+         <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+         <span class="title">Setting</span>
+       </a>
+      </li>
+     </ul>
+    </div>
+  </div>
+  <div class="model hide" >
+    <div class="model_inner">
+      <div class="model_herder">
+        <p>Edit Device</p>
+        <span class="iconTimes"><i class="fa fa-times" aria-hidden="true" ></i></span>
+      </div>
+      <div class="model_body">
+        <div class="editDevices">
+          <div class="edit">
+          <div class="form-control1 ">
+            <label>Device:</label>
+           <input id="nameEit" type="text" placeholder="name">
+           <small></small>
+          </div>
+          <div class="form-control1 ">
+            <label>Mac Adress:</label>
+           <input id="macEdit" type="text" placeholder="Mac Adress" readonly>
+           <small></small>
+          </div>
+          <div class="form-control1 ">
+            <label>IP Adress:</label>
+           <input id="ipEdit" type="text" placeholder="IP" readonly>
+           <small></small>
+          </div>
+          <div class="form-control1 ">
+            <label>Create Date:</label>
+           <input id="dateEdit" type="text" placeholder="dd/mm/yy" readonly>
+           <small></small>
+          </div>
+          <div class="form-control1">
+            <label>Power:</label>
+           <input id="numberEdit" type="number" placeholder="Power">
+           <small></small>
+          </div>
+          <small class="error-toggle"></small>
+         </div>
+         </div>
+        </div>
+        <div class="model_footer">
+          <button>Save</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="main">
+   <div class="topbar">
+    <div class="toggle" onclick="toggleMenu();"></div>
+    <div class="user">
+    <a href="/user.html" onclick="user.html"> <span class="user"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span></a>
+     <p>Wecome Jon</p>
+     <button onclick="SignOut();" class="signout"> Signout</button>
+    </div>
+   </div>
+   <div class="cardBoad">
+    <div class="card">
+     <table>
+      <thead>
+       <tr>
+        <td>Device</td>
+        <td>MAC Adress</td>
+        <td>IP</td>
+        <td>Create Date</td>
+        <td>Power Consumption</td>
+        <td>Action</td>
+       </tr>
+      </thead>
+      <tbody class="main-device">
+       
+      </tbody>
+     </table>
+     <div class="total">
+        <h2>Total:</h2>
+        <span class="spanTotal"></span>
+     </div>
+    </div>
+    <div class="Devices">
+   <div class="chart">
+    <canvas id="myChart">
+    </canvas>
+   </div>
+    <div class="addDevices">
+     <div class="add">
+     <div class="form-control ">
+      <input id="name" type="text" placeholder="name...">
+      <small></small>
+     
+     </div>
+     <div class="form-control ">
+      <input id="mac" type="text" placeholder="Mac Adress...">
+      <small></small>
+      
+     </div>
+     <div class="form-control ">
+      <input id="ip" type="text" placeholder="IP...">
+      <small></small>
+      <span></span>
+     </div>
+     <div class="form-control ">
+      <input id="date" type="text" placeholder="dd/mm/yy">
+      <small></small>
+      
+     </div>
+     <div class="form-control">
+      <input id="number" type="number" placeholder="Power...">
+      <small></small>
+
+     </div>
+     <small class="error-toggle"></small>
+     <div class="bnt-button">
+      
+     <button type="submit"class="submit" onclick="addDevice();">ADD DEVICE</button>
+    </div>
+    </div>
+   </div>
+   </div>
+  </div>
+ </div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+<script src="./js/dashboard.js"></script>
+</body>
+</html>
