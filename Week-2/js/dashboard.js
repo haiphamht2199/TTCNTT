@@ -223,7 +223,7 @@ function toggleMenu() {
 function SignOut() {
         localStorage.removeItem("name");
         localStorage.removeItem("password");
-        window.location.href = "/signin.html?"
+        window.location.href = "signin.html?"
 }
 
 

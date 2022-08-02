@@ -33,7 +33,7 @@ form.addEventListener('submit', function (e) {
  console.log(isError)
  if (!isError) {
   if (password.value.trim() == '1234' && email.value.trim() == 'john') {
-   window.location.href = "/dashboard.html";
+   window.location.href = "dashboard.html";
    localStorage.setItem("name", email.value.trim());
    localStorage.setItem("password", password.value.trim());
   } else {
